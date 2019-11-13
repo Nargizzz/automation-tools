@@ -1,0 +1,31 @@
+driver:
+  name: ec2
+  aws_ssh_key_id: UbuntuKeyPairs
+  region: us-east-2
+  availability_zone: b
+  subnet_id: subnet-efd1ab95
+  instance_type: t2.micro
+  image_id: ami-0d5d9d301c853a04a
+  security_group_ids: ["sg-09b64246a91e9b8a2"]
+  retryable_tries: 120
+
+provisioner:
+  name: chef_zero
+
+verifier:
+  name: inspec
+
+transport:
+  ssh_key: C:/Users/Fuad/.ssh/UbuntuKeyPairs.pem
+
+platforms:
+  - name: ubuntu-18.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[nginx_webserver::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:

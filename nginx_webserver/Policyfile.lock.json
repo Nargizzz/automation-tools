@@ -1,0 +1,51 @@
+{
+  "revision_id": "27183571b87dd6a37201065bca7a36d1d4cc0f87023ce0cb888d3d16c8020094",
+  "name": "nginx_webserver",
+  "run_list": [
+    "recipe[nginx_webserver::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "nginx_webserver": {
+      "version": "0.1.0",
+      "identifier": "606150b085b96392ffb2935aaf4d0bb10c9ba58d",
+      "dotted_decimal_identifier": "27128596951054691.41376489041211213.12855048643981",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "43fe6f2d252f9218874cfcb3419b012a040c3db9",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "nginx_webserver",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "nginx_webserver (0.1.0)": [
+
+      ]
+    }
+  }
+}
