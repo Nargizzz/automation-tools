@@ -350,7 +350,7 @@ GEM
       rubyzip (~> 1.1)
       winrm (~> 2.0)
     wmi-lite (1.0.0)
-    yajl-ruby (1.3.0)
+    yajl-ruby (1.4.3)
 
 PLATFORMS
   ruby
